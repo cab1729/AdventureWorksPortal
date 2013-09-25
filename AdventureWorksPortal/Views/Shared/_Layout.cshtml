@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" /> 
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/jqueryui")
+        @Scripts.Render("~/bundles/knockout")
+        @Scripts.Render("~/bundles/bootstrap")
+        @Styles.Render("~/Content/css")
+        @Styles.Render("~/Content/themes/base/css")
+        @Styles.Render("~/Content/bootstrap/base")
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+        <header>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p class="site-title">@Html.ActionLink("AdventureWorks Portal", "Index", new { area = "", controller = "Home" })</p>
+                </div>
+                <div class="float-right">
+                    <section id="login">
+                        @Html.Partial("_LoginPartial")
+                    </section>
+                    <nav>
+                        <!--
+                        <ul id="menu">
+                            <li>@Html.ActionLink("Home", "Index", new { area = "", controller = "Home" })</li>
+                            <li>@Html.ActionLink("About", "About", new { area = "", controller = "Home" })</li>
+                            <li>@Html.ActionLink("Contact", "Contact", new { area = "", controller = "Home" })</li>
+                        </ul> -->
+                        @Html.MvcSiteMap().Menu()
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @Html.MvcSiteMap().SiteMapPath()
+                @RenderBody()
+            </section>
+        </div>
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p>&copy; @DateTime.Now.Year - AdventureWorks Portal</p>
+                </div>
+            </div>
+        </footer>
+        
+        @RenderSection("Scripts", required: false)
+
+    </body>
+</html>

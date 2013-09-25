@@ -1,0 +1,223 @@
+﻿@model AdventureWorks.Domain.ModelObjects.Entities.PurchaseOrderHeader
+
+@{
+    ViewBag.Title = "Purchase Order Details";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<fieldset>
+    <legend>PurchaseOrderHeader</legend>
+
+    <table>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.RevisionNumber)
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.RevisionNumber)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Status)
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Status)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Employee.NationalIDNumber)
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Employee.NationalIDNumber)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Vendor.AccountNumber)
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Vendor.AccountNumber)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.ShipMethod.Name)
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.ShipMethod.Name)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.OrderDate)
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.OrderDate, "ShortDateTime")
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.ShipDate)
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.ShipDate, "ShortDateTime")
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.SubTotal)
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.SubTotal)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.TaxAmt)
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.TaxAmt)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Freight)
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Freight)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.TotalDue)
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.TotalDue)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.ModifiedDate)
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.ModifiedDate, "ShortDateTime")
+                </div>
+            </td>
+        </tr>
+    </table>
+    <table id="posdet" class="table table-striped table-bordered table-condensed">
+        <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PurchaseOrderDetails.FirstOrDefault().Product)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PurchaseOrderDetails.FirstOrDefault().DueDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PurchaseOrderDetails.FirstOrDefault().OrderQty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PurchaseOrderDetails.FirstOrDefault().ReceivedQty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PurchaseOrderDetails.FirstOrDefault().RejectedQty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PurchaseOrderDetails.FirstOrDefault().StockedQty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PurchaseOrderDetails.FirstOrDefault().UnitPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PurchaseOrderDetails.FirstOrDefault().LineTotal)
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model.PurchaseOrderDetails)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DueDate, "ShortDateTime")
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderQty)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReceivedQty)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RejectedQty)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StockedQty)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UnitPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LineTotal)
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PurchaseOrderID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

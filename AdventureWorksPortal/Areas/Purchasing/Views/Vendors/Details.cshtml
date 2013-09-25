@@ -1,0 +1,107 @@
+﻿@model AdventureWorksPortal.Areas.Purchasing.Models.VendorAddressContactModel
+
+@{
+    ViewBag.Title = "Vendor Details";
+}
+
+<h2>@ViewBag.Title</h2>
+<fieldset>
+    <legend>Vendor</legend>
+
+    <table>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Vendor.AccountNumber)
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Vendor.AccountNumber)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Vendor.Name)
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Vendor.Name)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Vendor.CreditRating)
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Vendor.CreditRating)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Vendor.PreferredVendorStatus)
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Vendor.PreferredVendorStatus)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Vendor.ActiveFlag)
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Vendor.ActiveFlag)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Vendor.PurchasingWebServiceURL)
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Vendor.PurchasingWebServiceURL)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Vendor.ModifiedDate)
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Vendor.ModifiedDate, "ShortDateTime")
+                </div>
+            </td>
+        </tr>
+    </table>
+</fieldset>
+<div>
+    @Html.Partial("_VendorAddress")
+</div>
+<div>
+    @Html.Partial("_VendorContact")
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Vendor.BusinessEntityID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

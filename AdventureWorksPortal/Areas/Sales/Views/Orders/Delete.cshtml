@@ -1,0 +1,285 @@
+﻿@model AdventureWorks.Domain.ModelObjects.Entities.SalesOrderHeader
+
+@{
+    ViewBag.Title = "Delete Sales Order";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>SalesOrderHeader</legend>
+
+    <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.RevisionNumber)
+                </div>
+            </td><td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.RevisionNumber)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.OrderDate)
+                </div>
+            </td><td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.OrderDate, "ShortDateTime")
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.DueDate)
+                </div>
+            </td><td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.DueDate, "ShortDateTime")
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.ShipDate)
+                </div>
+            </td><td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.ShipDate, "ShortDateTime")
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Status)
+                </div>
+            </td><td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Status)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.OnlineOrderFlag)
+                </div>
+            </td><td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.OnlineOrderFlag)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.SalesOrderNumber)
+                </div>
+            </td><td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.SalesOrderNumber)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.PurchaseOrderNumber)
+                </div>
+            </td><td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.PurchaseOrderNumber)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.AccountNumber)
+                </div>
+            </td><td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.AccountNumber)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Customer.AccountNumber)
+                </div>
+            </td><td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Customer.AccountNumber)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.SalesPerson.BusinessEntityID)
+                </div>
+            </td><td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.SalesPerson.BusinessEntityID)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.SalesTerritory.Name)
+                </div>
+            </td><td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.SalesTerritory.Name)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Address.AddressLine1)
+                </div>
+            </td><td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Address.AddressLine1)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Address1.AddressLine1)
+                </div>
+            </td><td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Address1.AddressLine1)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.ShipMethod.Name)
+                </div>
+            </td><td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.ShipMethod.Name)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.CreditCard.CardType)
+                </div>
+            </td><td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.CreditCard.CardType)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.CreditCardApprovalCode)
+                </div>
+            </td><td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.CreditCardApprovalCode)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.CurrencyRate.FromCurrencyCode)
+                </div>
+            </td><td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.CurrencyRate.FromCurrencyCode)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.SubTotal)
+                </div>
+            </td><td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.SubTotal)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.TaxAmt)
+                </div>
+            </td><td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.TaxAmt)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Freight)
+                </div>
+            </td><td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Freight)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.TotalDue)
+                </div>
+            </td><td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.TotalDue)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Comment)
+                </div>
+            </td><td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Comment)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.ModifiedDate)
+                </div>
+            </td><td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.ModifiedDate, "ShortDateTime")
+                </div>
+            </td>
+        </tr>
+    </table>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

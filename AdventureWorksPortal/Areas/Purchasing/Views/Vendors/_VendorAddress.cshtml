@@ -1,0 +1,82 @@
+﻿@model AdventureWorksPortal.Areas.Purchasing.Models.VendorAddressContactModel
+
+<h4>Vendor Address</h4>
+
+<fieldset>
+    <legend>VendorAddress</legend>
+    
+    <table>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.VendorAddress.AddressLine1)
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.VendorAddress.AddressLine1)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.VendorAddress.AddressLine2)
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.VendorAddress.AddressLine2)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.VendorAddress.City)
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.VendorAddress.City)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.VendorAddress.StateProvinceName)
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.VendorAddress.StateProvinceName)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.VendorAddress.PostalCode)
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.VendorAddress.PostalCode)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.VendorAddress.CountryRegionName)
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.VendorAddress.CountryRegionName)
+                </div>
+            </td>
+        </tr>
+    </table>
+</fieldset>

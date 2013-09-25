@@ -1,0 +1,90 @@
+﻿@model IEnumerable<AdventureWorks.Domain.ModelObjects.Entities.Vendor>
+
+@{
+    ViewBag.Title = "Purchasing - Vendors";
+}
+
+<h2>@ViewBag.Title Index</h2>
+
+<p>
+    @Html.ActionLink("New Vendor", "Create", null, new { @class = "btn btn-sm btn-primary" })
+</p>
+<table id="vendors" class="table table-striped table-bordered table-condensed">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AccountNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreditRating)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PreferredVendorStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActiveFlag)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PurchasingWebServiceURL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifiedDate)
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccountNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreditRating)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PreferredVendorStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActiveFlag)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PurchasingWebServiceURL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifiedDate, "ShortDateTime")
+        </td>
+        <td>
+            <div class="btn-group">
+                <button type="button" class="btn btn-sm dropdown-toggle" data-toggle="dropdown">
+                    Actions
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>@Html.ActionLink("Edit", "Edit", new { id = item.BusinessEntityID })</li> 
+                    <li>@Html.ActionLink("Details", "Details", new { id = item.BusinessEntityID })</li> 
+                    <li>@Html.ActionLink("Delete", "Delete", new { id = item.BusinessEntityID })</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+}
+    </tbody>
+
+</table>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#vendors').dataTable();
+        });
+    </script>
+}

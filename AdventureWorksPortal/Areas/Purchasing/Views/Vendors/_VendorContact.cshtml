@@ -1,0 +1,59 @@
+﻿@model AdventureWorksPortal.Areas.Purchasing.Models.VendorAddressContactModel
+
+<h4>Vendor Contact</h4>
+
+<fieldset>
+    <legend>VendorContact</legend>
+    
+    <table>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.VendorContact.FirstName)
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.VendorContact.FirstName)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.VendorContact.LastName)
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.VendorContact.LastName)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.VendorContact.PhoneNumber)
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.VendorContact.PhoneNumber)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.VendorContact.EmailAddress)
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.VendorContact.EmailAddress)
+                </div>
+            </td>
+        </tr>
+    </table>
+</fieldset>
+

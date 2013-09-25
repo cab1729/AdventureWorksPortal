@@ -1,0 +1,334 @@
+﻿@model AdventureWorks.Domain.ModelObjects.Entities.Product
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Product</legend>
+
+        <table>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Name)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Name)
+                        @Html.ValidationMessageFor(model => model.Name)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.ProductNumber)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.ProductNumber)
+                        @Html.ValidationMessageFor(model => model.ProductNumber)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.MakeFlag)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.MakeFlag)
+                        @Html.ValidationMessageFor(model => model.MakeFlag)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.FinishedGoodsFlag)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.FinishedGoodsFlag)
+                        @Html.ValidationMessageFor(model => model.FinishedGoodsFlag)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Color)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Color)
+                        @Html.ValidationMessageFor(model => model.Color)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.SafetyStockLevel)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.SafetyStockLevel)
+                        @Html.ValidationMessageFor(model => model.SafetyStockLevel)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.ReorderPoint)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.ReorderPoint)
+                        @Html.ValidationMessageFor(model => model.ReorderPoint)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.StandardCost)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.StandardCost)
+                        @Html.ValidationMessageFor(model => model.StandardCost)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.ListPrice)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.ListPrice)
+                        @Html.ValidationMessageFor(model => model.ListPrice)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Size)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Size)
+                        @Html.ValidationMessageFor(model => model.Size)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.SizeUnitMeasureCode, "Size Unit Measure")
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.DropDownList("SizeUnitMeasureCode", String.Empty)
+                        @Html.ValidationMessageFor(model => model.SizeUnitMeasureCode)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Weight)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Weight)
+                        @Html.ValidationMessageFor(model => model.Weight)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.WeightUnitMeasureCode, "Weight Unit Measure")
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.DropDownList("WeightUnitMeasureCode", String.Empty)
+                        @Html.ValidationMessageFor(model => model.WeightUnitMeasureCode)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.DaysToManufacture)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.DaysToManufacture)
+                        @Html.ValidationMessageFor(model => model.DaysToManufacture)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.ProductLine)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.ProductLine)
+                        @Html.ValidationMessageFor(model => model.ProductLine)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Class)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Class)
+                        @Html.ValidationMessageFor(model => model.Class)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Style)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Style)
+                        @Html.ValidationMessageFor(model => model.Style)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.ProductSubcategoryID, "Product Subcategory")
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.DropDownList("ProductSubcategoryID", String.Empty)
+                        @Html.ValidationMessageFor(model => model.ProductSubcategoryID)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.ProductModelID, "Product Model")
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.DropDownList("ProductModelID", String.Empty)
+                        @Html.ValidationMessageFor(model => model.ProductModelID)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.SellStartDate)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.SellStartDate)
+                        @Html.ValidationMessageFor(model => model.SellStartDate)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.SellEndDate)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.SellEndDate)
+                        @Html.ValidationMessageFor(model => model.SellEndDate)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.DiscontinuedDate)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.DiscontinuedDate)
+                        @Html.ValidationMessageFor(model => model.DiscontinuedDate)
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <!--
+    <script type="text/javascript">
+        $(function () {
+            $("#SellStartDate").datepicker();
+        });
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $("#SellEndDate").datepicker();
+        });
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $("#DiscontinuedDate").datepicker();
+        });
+    -->
+    </script>
+
+}

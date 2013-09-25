@@ -1,0 +1,315 @@
+﻿@model AdventureWorks.Domain.ModelObjects.Entities.SalesOrderHeader
+
+@{
+    ViewBag.Title = "Create Sales Order";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>SalesOrderHeader</legend>
+
+        <table>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.OrderDate)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.OrderDate)
+                        @Html.ValidationMessageFor(model => model.OrderDate)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.DueDate)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.DueDate)
+                        @Html.ValidationMessageFor(model => model.DueDate)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.ShipDate)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.ShipDate)
+                        @Html.ValidationMessageFor(model => model.ShipDate)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Status)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Status)
+                        @Html.ValidationMessageFor(model => model.Status)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.OnlineOrderFlag)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.OnlineOrderFlag)
+                        @Html.ValidationMessageFor(model => model.OnlineOrderFlag)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.SalesOrderNumber)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.SalesOrderNumber)
+                        @Html.ValidationMessageFor(model => model.SalesOrderNumber)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.PurchaseOrderNumber)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.PurchaseOrderNumber)
+                        @Html.ValidationMessageFor(model => model.PurchaseOrderNumber)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.AccountNumber)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.AccountNumber)
+                        @Html.ValidationMessageFor(model => model.AccountNumber)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.CustomerID, "Customer")
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.DropDownList("CustomerID", String.Empty)
+                        @Html.ValidationMessageFor(model => model.CustomerID)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.SalesPersonID, "SalesPerson")
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.DropDownList("SalesPersonID", String.Empty)
+                        @Html.ValidationMessageFor(model => model.SalesPersonID)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.TerritoryID, "SalesTerritory")
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.DropDownList("TerritoryID", String.Empty)
+                        @Html.ValidationMessageFor(model => model.TerritoryID)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.BillToAddressID, "Address")
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.DropDownList("BillToAddressID", String.Empty)
+                        @Html.ValidationMessageFor(model => model.BillToAddressID)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.ShipToAddressID, "Address1")
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.DropDownList("ShipToAddressID", String.Empty)
+                        @Html.ValidationMessageFor(model => model.ShipToAddressID)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.ShipMethodID, "ShipMethod")
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.DropDownList("ShipMethodID", String.Empty)
+                        @Html.ValidationMessageFor(model => model.ShipMethodID)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.CreditCardID, "CreditCard")
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.DropDownList("CreditCardID", String.Empty)
+                        @Html.ValidationMessageFor(model => model.CreditCardID)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.CreditCardApprovalCode)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.CreditCardApprovalCode)
+                        @Html.ValidationMessageFor(model => model.CreditCardApprovalCode)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.CurrencyRateID, "CurrencyRate")
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.DropDownList("CurrencyRateID", String.Empty)
+                        @Html.ValidationMessageFor(model => model.CurrencyRateID)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.SubTotal)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.SubTotal)
+                        @Html.ValidationMessageFor(model => model.SubTotal)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.TaxAmt)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.TaxAmt)
+                        @Html.ValidationMessageFor(model => model.TaxAmt)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Freight)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Freight)
+                        @Html.ValidationMessageFor(model => model.Freight)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.TotalDue)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.TotalDue)
+                        @Html.ValidationMessageFor(model => model.TotalDue)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Comment)
+                    </div>
+                </td><td>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Comment)
+                        @Html.ValidationMessageFor(model => model.Comment)
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

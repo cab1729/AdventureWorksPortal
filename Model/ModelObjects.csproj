@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B05E6CA0-AB9C-4210-A2D4-4C00A7C5CE75}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Model</RootNamespace>
+    <AssemblyName>Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Address.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AddressType.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AdventureWorksDb.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdventureWorksDb.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AdventureWorksDb.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AdventureWorksModel.Designer.cs">
+      <DependentUpon>AdventureWorksModel.edmx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Entities\AWBuildVersion.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\BillOfMaterial.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\BusinessEntity.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\BusinessEntityAddress.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\BusinessEntityContact.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ContactType.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CountryRegion.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CountryRegionCurrency.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CreditCard.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Culture.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Currency.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CurrencyRate.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Customer.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\DatabaseLog.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Department.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\EmailAddress.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Employee.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\EmployeeDepartmentHistory.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\EmployeePayHistory.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ErrorLog.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Illustration.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\JobCandidate.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Location.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Password.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Person.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\PersonCreditCard.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\PersonPhone.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\PhoneNumberType.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Product.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ProductCategory.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ProductCostHistory.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ProductDescription.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ProductDocument.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ProductInventory.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ProductListPriceHistory.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ProductModel.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ProductModelIllustration.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ProductModelProductDescriptionCulture.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ProductPhoto.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ProductProductPhoto.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ProductReview.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ProductSubcategory.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ProductVendor.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\PurchaseOrderDetail.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\PurchaseOrderHeader.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SalesOrderDetail.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SalesOrderHeader.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SalesOrderHeaderSalesReason.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SalesPerson.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SalesPersonQuotaHistory.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SalesReason.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SalesTaxRate.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SalesTerritory.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SalesTerritoryHistory.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ScrapReason.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Shift.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ShipMethod.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ShoppingCartItem.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SpecialOffer.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SpecialOfferProduct.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\StateProvince.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Store.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sysdiagram.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\TransactionHistory.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\TransactionHistoryArchive.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\UnitMeasure.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vAdditionalContactInfo.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vDocument.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vEmployee.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vEmployeeDepartment.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vEmployeeDepartmentHistory.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Vendor.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vIndividualCustomer.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vJobCandidate.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vJobCandidateEducation.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vJobCandidateEmployment.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vPersonDemographic.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vProductAndDescription.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vProductModelCatalogDescription.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vProductModelInstruction.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vSalesPerson.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vSalesPersonSalesByFiscalYear.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vStateProvinceCountryRegion.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vStoreWithAddress.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vStoreWithContact.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vStoreWithDemographic.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vVendorWithAddress.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vVendorWithContact.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\WorkOrder.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\WorkOrderRouting.cs">
+      <DependentUpon>AdventureWorksDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="Entities\AdventureWorksModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AdventureWorksModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Entities\AdventureWorksDb.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AdventureWorksDb.Context.cs</LastGenOutput>
+      <CustomToolNamespace>AdventureWorks.Domain.ModelObjects.Entities</CustomToolNamespace>
+    </None>
+    <None Include="Entities\AdventureWorksDb.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AdventureWorksDb.cs</LastGenOutput>
+      <CustomToolNamespace>AdventureWorks.Domain.ModelObjects.Entities</CustomToolNamespace>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
