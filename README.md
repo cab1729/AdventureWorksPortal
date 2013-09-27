@@ -15,8 +15,8 @@ Projects in solution:
 
 -	DataAccessObjects (class library)
 	
-	Data Access Layer. 
+	Data Access Layer. Encapsulates database access and CRUD behavior.
 
 -	ServiceObjects (class library)
 
-	Service layer.
+	Service layer. Encapsulates access to DAO's. This would be the place to put business rules.
