@@ -19,4 +19,4 @@ Projects in solution:
 
 -	ServiceObjects (class library)
 
-	Service layer. Encapsulates access to DAO's. This would be the place to put business rules.
+	Service layer. Encapsulates access to DAO's.
