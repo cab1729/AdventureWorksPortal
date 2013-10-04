@@ -11,21 +11,13 @@ namespace AdventureWorks.Domain.ModelObjects.Entities
 {
     using System;
     using System.Collections.Generic;
-    using System.Runtime.Serialization;
-    using System.ComponentModel.DataAnnotations;
     
-    [DataContract]
     public partial class ProductInventory
     {
-        [DataMember]
         public int ProductID { get; set; }
-        [DataMember]
         public short LocationID { get; set; }
-        [DataMember]
         public string Shelf { get; set; }
-        [DataMember]
         public byte Bin { get; set; }
-        [DataMember]
         public short Quantity { get; set; }
         public System.Guid rowguid { get; set; }
         public System.DateTime ModifiedDate { get; set; }

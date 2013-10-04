@@ -11,10 +11,7 @@ namespace AdventureWorks.Domain.ModelObjects.Entities
 {
     using System;
     using System.Collections.Generic;
-    using System.Runtime.Serialization;
-    using System.ComponentModel.DataAnnotations;
     
-    [DataContract]
     public partial class Vendor
     {
         public Vendor()
@@ -23,26 +20,13 @@ namespace AdventureWorks.Domain.ModelObjects.Entities
             this.PurchaseOrderHeaders = new HashSet<PurchaseOrderHeader>();
         }
     
-        [DataMember]
         public int BusinessEntityID { get; set; }
-        [DataMember]
-        [Display(Name = "Account Number")]
         public string AccountNumber { get; set; }
-        [DataMember]
         public string Name { get; set; }
-        [DataMember]
-        [Display(Name = "Credit Rating")]
         public byte CreditRating { get; set; }
-        [DataMember]
-        [Display(Name = "Preferred Vendor Status")]
         public bool PreferredVendorStatus { get; set; }
-        [DataMember]
-        [Display(Name = "Active Flag")]
         public bool ActiveFlag { get; set; }
-        [DataMember]
-        [Display(Name = "Purchasing Web Service URL")]
         public string PurchasingWebServiceURL { get; set; }
-        [Display(Name = "Modified Date")]
         public System.DateTime ModifiedDate { get; set; }
     
         public virtual BusinessEntity BusinessEntity { get; set; }

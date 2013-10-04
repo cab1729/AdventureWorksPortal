@@ -11,9 +11,7 @@ namespace AdventureWorks.Domain.ModelObjects.Entities
 {
     using System;
     using System.Collections.Generic;
-    using System.Runtime.Serialization;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class Address
     {
         public Address()
@@ -24,13 +22,10 @@ namespace AdventureWorks.Domain.ModelObjects.Entities
         }
     
         public int AddressID { get; set; }
-        [Display(Name = "Address Line 1")]
         public string AddressLine1 { get; set; }
-        [Display(Name = "Address Line 2")]
         public string AddressLine2 { get; set; }
         public string City { get; set; }
         public int StateProvinceID { get; set; }
-        [Display(Name = "Postal Code")]
         public string PostalCode { get; set; }
         public System.Guid rowguid { get; set; }
         public System.DateTime ModifiedDate { get; set; }

@@ -11,17 +11,12 @@ namespace AdventureWorks.Domain.ModelObjects.Entities
 {
     using System;
     using System.Collections.Generic;
-    using System.Runtime.Serialization;
-    using System.ComponentModel.DataAnnotations;
     
     public partial class ProductCostHistory
     {
         public int ProductID { get; set; }
-        [Display (Name = "Start Date")]
         public System.DateTime StartDate { get; set; }
-        [Display(Name = "End Date")]
         public Nullable<System.DateTime> EndDate { get; set; }
-        [Display(Name = "Standard Cost")]
         public decimal StandardCost { get; set; }
         public System.DateTime ModifiedDate { get; set; }
     

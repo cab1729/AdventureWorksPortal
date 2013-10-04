@@ -11,32 +11,16 @@ namespace AdventureWorks.Domain.ModelObjects.Entities
 {
     using System;
     using System.Collections.Generic;
-    using System.Runtime.Serialization;
-    using System.ComponentModel.DataAnnotations;
     
-    [DataContract]
     public partial class BillOfMaterial
     {
-        [DataMember]
         public int BillOfMaterialsID { get; set; }
-        [DataMember]
         public Nullable<int> ProductAssemblyID { get; set; }
-        [DataMember]
         public int ComponentID { get; set; }
-        [DataMember]
-        [Display (Name="Start Date")]
         public System.DateTime StartDate { get; set; }
-        [DataMember]
-        [Display(Name = "End Date")]
         public Nullable<System.DateTime> EndDate { get; set; }
-        [DataMember]
-        [Display(Name = "Unit of Measure")]
         public string UnitMeasureCode { get; set; }
-        [DataMember]
-        [Display(Name = "BOM Level")]
         public short BOMLevel { get; set; }
-        [DataMember]
-        [Display(Name = "Per Assembly Qty")]
         public decimal PerAssemblyQty { get; set; }
         public System.DateTime ModifiedDate { get; set; }
     

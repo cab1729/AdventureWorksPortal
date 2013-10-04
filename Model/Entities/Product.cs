@@ -11,10 +11,7 @@ namespace AdventureWorks.Domain.ModelObjects.Entities
 {
     using System;
     using System.Collections.Generic;
-    using System.Runtime.Serialization;
-    using System.ComponentModel.DataAnnotations;
     
-    [DataContract]
     public partial class Product
     {
         public Product()
@@ -34,71 +31,30 @@ namespace AdventureWorks.Domain.ModelObjects.Entities
             this.WorkOrders = new HashSet<WorkOrder>();
         }
     
-        [DataMember]
         public int ProductID { get; set; }
-        [DataMember]
         public string Name { get; set; }
-        [DataMember]
-        [Display(Name = "Product Number")]
         public string ProductNumber { get; set; }
-        [DataMember]
-        [Display(Name = "Make Flag")]
         public bool MakeFlag { get; set; }
-        [DataMember]
-        [Display(Name = "Finished Goods Flag")]
         public bool FinishedGoodsFlag { get; set; }
-        [DataMember]
         public string Color { get; set; }
-        [DataMember]
-        [Display(Name = "Safety Stock Level")]
         public short SafetyStockLevel { get; set; }
-        [DataMember]
-        [Display(Name = "Reorder Point")]
         public short ReorderPoint { get; set; }
-        [DataMember]
-        [Display(Name = "Standard Cost")]
         public decimal StandardCost { get; set; }
-        [DataMember]
-        [Display(Name = "List Price")]
         public decimal ListPrice { get; set; }
-        [DataMember]
         public string Size { get; set; }
-        [DataMember]
-        [Display(Name = "Size Unit")]
         public string SizeUnitMeasureCode { get; set; }
-        [DataMember]
-        [Display(Name = "Weight Unit")]
         public string WeightUnitMeasureCode { get; set; }
-        [DataMember]
         public Nullable<decimal> Weight { get; set; }
-        [DataMember]
-        [Display(Name = "Days to Manufacture")]
         public int DaysToManufacture { get; set; }
-        [DataMember]
-        [Display(Name = "Product Line")]
         public string ProductLine { get; set; }
-        [DataMember]
         public string Class { get; set; }
-        [DataMember]
         public string Style { get; set; }
-        [DataMember]
-        [Display(Name = "Product Subcategory ID")]
         public Nullable<int> ProductSubcategoryID { get; set; }
-        [DataMember]
-        [Display(Name = "Model ID")]
         public Nullable<int> ProductModelID { get; set; }
-        [DataMember]
-        [Display(Name = "Sell Start Date")]
         public System.DateTime SellStartDate { get; set; }
-        [DataMember]
-        [Display(Name = "Sell End Date")]
         public Nullable<System.DateTime> SellEndDate { get; set; }
-        [DataMember]
-        [Display(Name = "Discontinued Date")]
         public Nullable<System.DateTime> DiscontinuedDate { get; set; }
-        [DataMember]
         public System.Guid rowguid { get; set; }
-        [DataMember]
         public System.DateTime ModifiedDate { get; set; }
     
         public virtual ICollection<BillOfMaterial> BillOfMaterials { get; set; }

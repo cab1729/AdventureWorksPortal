@@ -11,7 +11,6 @@ namespace AdventureWorks.Domain.ModelObjects.Entities
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
     
     public partial class ProductModel
     {
@@ -23,9 +22,7 @@ namespace AdventureWorks.Domain.ModelObjects.Entities
         }
     
         public int ProductModelID { get; set; }
-        [Display(Name = "Model Name")]
         public string Name { get; set; }
-        [Display(Name = "Description")]
         public string CatalogDescription { get; set; }
         public string Instructions { get; set; }
         public System.Guid rowguid { get; set; }

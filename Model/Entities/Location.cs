@@ -11,10 +11,7 @@ namespace AdventureWorks.Domain.ModelObjects.Entities
 {
     using System;
     using System.Collections.Generic;
-    using System.Runtime.Serialization;
-    using System.ComponentModel.DataAnnotations;
     
-    [DataContract]
     public partial class Location
     {
         public Location()
@@ -22,23 +19,14 @@ namespace AdventureWorks.Domain.ModelObjects.Entities
             this.ProductInventories = new HashSet<ProductInventory>();
             this.WorkOrderRoutings = new HashSet<WorkOrderRouting>();
         }
-
-        [DataMember]
-        [Display(Name = "Location Id")]
+    
         public short LocationID { get; set; }
-        [DataMember]
-        [Display(Name = "Location")]
         public string Name { get; set; }
-        [DataMember]
-        [Display(Name = "Cost Rate")]
         public decimal CostRate { get; set; }
-        [DataMember]
         public decimal Availability { get; set; }
         public System.DateTime ModifiedDate { get; set; }
-
-        [DataMember]
+    
         public virtual ICollection<ProductInventory> ProductInventories { get; set; }
-        [DataMember]
         public virtual ICollection<WorkOrderRouting> WorkOrderRoutings { get; set; }
     }
 }

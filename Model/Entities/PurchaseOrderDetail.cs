@@ -11,38 +11,18 @@ namespace AdventureWorks.Domain.ModelObjects.Entities
 {
     using System;
     using System.Collections.Generic;
-    using System.Runtime.Serialization;
-    using System.ComponentModel.DataAnnotations;
-
-    [DataContract]
+    
     public partial class PurchaseOrderDetail
     {
-        [DataMember]
         public int PurchaseOrderID { get; set; }
-        [DataMember]
         public int PurchaseOrderDetailID { get; set; }
-        [DataMember]
-        [Display(Name = "Due Date")]
         public System.DateTime DueDate { get; set; }
-        [DataMember]
-        [Display(Name = "Order Qty")]
         public short OrderQty { get; set; }
-        [DataMember]
         public int ProductID { get; set; }
-        [DataMember]
-        [Display(Name = "Unit Price")]
         public decimal UnitPrice { get; set; }
-        [DataMember]
-        [Display(Name = "Line Total")]
         public decimal LineTotal { get; set; }
-        [DataMember]
-        [Display(Name = "Received Qty")]
         public decimal ReceivedQty { get; set; }
-        [DataMember]
-        [Display(Name = "Rejected Qty")]
         public decimal RejectedQty { get; set; }
-        [DataMember]
-        [Display(Name = "Stocked Qty")]
         public decimal StockedQty { get; set; }
         public System.DateTime ModifiedDate { get; set; }
     

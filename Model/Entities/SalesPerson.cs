@@ -11,8 +11,6 @@ namespace AdventureWorks.Domain.ModelObjects.Entities
 {
     using System;
     using System.Collections.Generic;
-    using System.Runtime.Serialization;
-    using System.ComponentModel.DataAnnotations;
     
     public partial class SalesPerson
     {
@@ -26,15 +24,10 @@ namespace AdventureWorks.Domain.ModelObjects.Entities
     
         public int BusinessEntityID { get; set; }
         public Nullable<int> TerritoryID { get; set; }
-        [Display (Name = "Sales Quota")]
         public Nullable<decimal> SalesQuota { get; set; }
-        [Display(Name = "Bonus")]
         public decimal Bonus { get; set; }
-        [Display(Name = "Commission Pct")]
         public decimal CommissionPct { get; set; }
-        [Display(Name = "Sales YTD")]
         public decimal SalesYTD { get; set; }
-        [Display(Name = "Sales Last Year")]
         public decimal SalesLastYear { get; set; }
         public System.Guid rowguid { get; set; }
         public System.DateTime ModifiedDate { get; set; }

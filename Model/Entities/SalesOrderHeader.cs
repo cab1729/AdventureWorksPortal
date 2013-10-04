@@ -11,10 +11,7 @@ namespace AdventureWorks.Domain.ModelObjects.Entities
 {
     using System;
     using System.Collections.Generic;
-    using System.Runtime.Serialization;
-    using System.ComponentModel.DataAnnotations;
     
-    [DataContract]
     public partial class SalesOrderHeader
     {
         public SalesOrderHeader()
@@ -23,65 +20,29 @@ namespace AdventureWorks.Domain.ModelObjects.Entities
             this.SalesOrderHeaderSalesReasons = new HashSet<SalesOrderHeaderSalesReason>();
         }
     
-        [DataMember]
         public int SalesOrderID { get; set; }
-        [DataMember]
-        [Display(Name = "Revision Number")]
         public byte RevisionNumber { get; set; }
-        [DataMember]
-        [Display(Name = "Order Date")]
         public System.DateTime OrderDate { get; set; }
-        [DataMember]
-        [Display(Name = "Due Date")]
         public System.DateTime DueDate { get; set; }
-        [DataMember]
         public Nullable<System.DateTime> ShipDate { get; set; }
-        [DataMember]
         public byte Status { get; set; }
-        [DataMember]
-        [Display(Name = "Online Order Flag")]
         public bool OnlineOrderFlag { get; set; }
-        [DataMember]
-        [Display(Name = "Sales Order Number")]
         public string SalesOrderNumber { get; set; }
-        [DataMember]
-        [Display(Name = "PO Number")]
         public string PurchaseOrderNumber { get; set; }
-        [DataMember]
-        [Display(Name = "Account Number")]
         public string AccountNumber { get; set; }
-        [DataMember]
         public int CustomerID { get; set; }
-        [DataMember]
         public Nullable<int> SalesPersonID { get; set; }
-        [DataMember]
         public Nullable<int> TerritoryID { get; set; }
-        [DataMember]
         public int BillToAddressID { get; set; }
-        [DataMember]
         public int ShipToAddressID { get; set; }
-        [DataMember]
         public int ShipMethodID { get; set; }
-        [DataMember]
         public Nullable<int> CreditCardID { get; set; }
-        [DataMember]
-        [Display(Name = "CC Approval Code")]
         public string CreditCardApprovalCode { get; set; }
-        [DataMember]
         public Nullable<int> CurrencyRateID { get; set; }
-        [DataMember]
-        [Display(Name = "Subtotal")]
         public decimal SubTotal { get; set; }
-        [DataMember]
-        [Display(Name = "Tax Amount")]
         public decimal TaxAmt { get; set; }
-        [DataMember]
-        [Display(Name = "Freight")]
         public decimal Freight { get; set; }
-        [DataMember]
-        [Display(Name = "Total Due")]
         public decimal TotalDue { get; set; }
-        [DataMember]
         public string Comment { get; set; }
         public System.Guid rowguid { get; set; }
         public System.DateTime ModifiedDate { get; set; }

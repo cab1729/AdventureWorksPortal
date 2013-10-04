@@ -11,10 +11,7 @@ namespace AdventureWorks.Domain.ModelObjects.Entities
 {
     using System;
     using System.Collections.Generic;
-    using System.Runtime.Serialization;
-    using System.ComponentModel.DataAnnotations;
     
-    [DataContract]
     public partial class PurchaseOrderHeader
     {
         public PurchaseOrderHeader()
@@ -22,45 +19,23 @@ namespace AdventureWorks.Domain.ModelObjects.Entities
             this.PurchaseOrderDetails = new HashSet<PurchaseOrderDetail>();
         }
     
-        [DataMember]
         public int PurchaseOrderID { get; set; }
-        [DataMember]
-        [Display(Name = "Revision Number")]
         public byte RevisionNumber { get; set; }
-        [DataMember]
         public byte Status { get; set; }
-        [DataMember]
         public int EmployeeID { get; set; }
-        [DataMember]
         public int VendorID { get; set; }
-        [DataMember]
         public int ShipMethodID { get; set; }
-        [DataMember]
-        [Display(Name = "Order Date")]
         public System.DateTime OrderDate { get; set; }
-        [DataMember]
-        [Display(Name = "Ship Date")]
         public Nullable<System.DateTime> ShipDate { get; set; }
-        [DataMember]
-        [Display(Name = "Sub Total")]
         public decimal SubTotal { get; set; }
-        [DataMember]
-        [Display(Name = "Tax Amount")]
         public decimal TaxAmt { get; set; }
-        [DataMember]
-        [Display(Name = "Freight")]
         public decimal Freight { get; set; }
-        [DataMember]
-        [Display(Name = "Total Due")]
         public decimal TotalDue { get; set; }
         public System.DateTime ModifiedDate { get; set; }
     
         public virtual Employee Employee { get; set; }
-        [DataMember]
         public virtual ICollection<PurchaseOrderDetail> PurchaseOrderDetails { get; set; }
-        [DataMember]
         public virtual ShipMethod ShipMethod { get; set; }
-        [DataMember]
         public virtual Vendor Vendor { get; set; }
     }
 }

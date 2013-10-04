@@ -11,34 +11,17 @@ namespace AdventureWorks.Domain.ModelObjects.Entities
 {
     using System;
     using System.Collections.Generic;
-    using System.Runtime.Serialization;
-    using System.ComponentModel.DataAnnotations;
     
-    [DataContract]
     public partial class SalesOrderDetail
     {
-        [DataMember]
         public int SalesOrderID { get; set; }
-        [DataMember]
         public int SalesOrderDetailID { get; set; }
-        [DataMember]
-        [Display(Name = "Carrier Tracking Number")]
         public string CarrierTrackingNumber { get; set; }
-        [DataMember]
-        [Display(Name = "Order Qty")]
         public short OrderQty { get; set; }
-        [DataMember]
         public int ProductID { get; set; }
-        [DataMember]
         public int SpecialOfferID { get; set; }
-        [DataMember]
-        [Display(Name = "Unit Price")]
         public decimal UnitPrice { get; set; }
-        [DataMember]
-        [Display(Name = "Unit Price Discount")]
         public decimal UnitPriceDiscount { get; set; }
-        [DataMember]
-        [Display(Name = "Line Total")]
         public decimal LineTotal { get; set; }
         public System.Guid rowguid { get; set; }
         public System.DateTime ModifiedDate { get; set; }

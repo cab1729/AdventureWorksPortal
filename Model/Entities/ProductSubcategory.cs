@@ -11,7 +11,6 @@ namespace AdventureWorks.Domain.ModelObjects.Entities
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
     
     public partial class ProductSubcategory
     {
@@ -22,7 +21,6 @@ namespace AdventureWorks.Domain.ModelObjects.Entities
     
         public int ProductSubcategoryID { get; set; }
         public int ProductCategoryID { get; set; }
-        [Display(Name = "Product Subcategory")]
         public string Name { get; set; }
         public System.Guid rowguid { get; set; }
         public System.DateTime ModifiedDate { get; set; }

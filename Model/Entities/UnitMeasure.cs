@@ -11,7 +11,6 @@ namespace AdventureWorks.Domain.ModelObjects.Entities
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
     
     public partial class UnitMeasure
     {
@@ -24,7 +23,6 @@ namespace AdventureWorks.Domain.ModelObjects.Entities
         }
     
         public string UnitMeasureCode { get; set; }
-        [Display (Name = "Unit")]
         public string Name { get; set; }
         public System.DateTime ModifiedDate { get; set; }
     

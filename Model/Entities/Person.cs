@@ -11,8 +11,6 @@ namespace AdventureWorks.Domain.ModelObjects.Entities
 {
     using System;
     using System.Collections.Generic;
-    using System.Runtime.Serialization;
-    using System.ComponentModel.DataAnnotations;
     
     public partial class Person
     {
@@ -26,24 +24,15 @@ namespace AdventureWorks.Domain.ModelObjects.Entities
         }
     
         public int BusinessEntityID { get; set; }
-        [Display (Name = "Person Type")]
         public string PersonType { get; set; }
-        [Display(Name = "Name Style")]
         public bool NameStyle { get; set; }
         public string Title { get; set; }
-        [Display(Name = "First Name")]
         public string FirstName { get; set; }
-        [Display(Name = "Middle")]
         public string MiddleName { get; set; }
-        [Display(Name = "Last Name")]
         public string LastName { get; set; }
-        [Display(Name = "Suffix")]
         public string Suffix { get; set; }
-        [Display(Name = "Email Promotion")]
         public int EmailPromotion { get; set; }
-        [Display(Name = "Addt'l Contact Info")]
         public string AdditionalContactInfo { get; set; }
-        [Display(Name = "Demographics")]
         public string Demographics { get; set; }
         public System.Guid rowguid { get; set; }
         public System.DateTime ModifiedDate { get; set; }
