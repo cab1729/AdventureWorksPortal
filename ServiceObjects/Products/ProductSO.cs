@@ -8,6 +8,7 @@ namespace AdventureWorks.Domain.ServiceObjects.Products
     using AdventureWorks.Domain.DataAccessObjects;
     using AdventureWorks.Domain.DataAccessObjects.Products;
     using AdventureWorks.Domain.ModelObjects.Entities;
+    using AdventureWorks.Domain.ModelObjects.DataTransfer;
 
     public interface IProductSO
     {
@@ -20,11 +21,21 @@ namespace AdventureWorks.Domain.ServiceObjects.Products
         IEnumerable<ProductSubcategory> getProductSubcategories();
         IEnumerable<UnitMeasure> getUnitMeasures();
         IEnumerable<ProductDocument> getProductDocuments();
+
+        IEnumerable<ProductDTO> getProductDTOList();
+        ProductDTO getProductDTODetail(int id);
     }
 
     public class ProductSO : IProductSO
     {
         private IProductDAO _ProductDAO = DAOFactory.Instance.ProductDAO;
+
+        static ProductSO() 
+        {
+            AutoMapper.Mapper.Configuration.AllowNullDestinationValues = false;
+            AutoMapper.Mapper.CreateMap<Product, ProductDTO>();
+            AutoMapper.Mapper.CreateMap<ProductInventory, ProductInventoryDTO>();
+        }
 
         public IEnumerable<Product> getProductList()
         {
@@ -69,6 +80,27 @@ namespace AdventureWorks.Domain.ServiceObjects.Products
         public IEnumerable<ProductDocument> getProductDocuments()
         {
             return _ProductDAO.getProductDocuments();
+        }
+
+        public IEnumerable<ProductDTO> getProductDTOList()
+        {
+            IEnumerable<Product> pl = _ProductDAO.getProductList();
+            IEnumerable<ProductDTO> pdto =
+                AutoMapper.Mapper.Map<IEnumerable<Product>, IEnumerable<ProductDTO>>(pl);
+
+            return pdto;
+        }
+
+        public ProductDTO getProductDTODetail(int id)
+        {
+            Product product = _ProductDAO.getProductDetail(id);
+            if (null == product)
+            {
+                product = new Product();    // empty values
+            }
+            ProductDTO pdto =
+                AutoMapper.Mapper.Map<Product, ProductDTO>(product);
+            return pdto;
         }
     }
 }

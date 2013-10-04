@@ -9,19 +9,20 @@ namespace AdventureWorksPortal.Areas.Products.Controllers
 {
     using AdventureWorks.Domain.ServiceObjects;
     using AdventureWorks.Domain.ModelObjects.Entities;
+    using AdventureWorks.Domain.ModelObjects.DataTransfer;
 
     public class ProductsRESTController : ApiController
     {
         // GET api/productsrest
-        public IEnumerable<Product> Get()
+        public IEnumerable<ProductDTO> Get()
         {
-            return ServiceFactoryAccess.ProductSO.getProductList();
+            return ServiceFactoryAccess.ProductSO.getProductDTOList();
         }
 
         // GET api/productsrest/5
-        public Product Get(int id)
+        public ProductDTO Get(int id)
         {
-            return ServiceFactoryAccess.ProductSO.getProductDetail(id);
+            return ServiceFactoryAccess.ProductSO.getProductDTODetail(id);
         }
 
         // POST api/productsrest

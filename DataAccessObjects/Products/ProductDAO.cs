@@ -50,7 +50,7 @@ namespace AdventureWorks.Domain.DataAccessObjects.Products
                 .Include("UnitMeasure1")
                 .Include("ProductDocument")
                 .Include(p => p.ProductInventories.Select(i => i.Location))
-                .Single(p => p.ProductID == id);
+                .SingleOrDefault(p => p.ProductID == id);
             return product;
         }
 
