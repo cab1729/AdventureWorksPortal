@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.NET35.1.1.0.118\lib\net35\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
     </Reference>
@@ -47,6 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataTransfer\ProductDTO.cs" />
+    <Compile Include="DataTransfer\ProductInventoryDTO.cs" />
     <Compile Include="Entities\Address.cs">
       <DependentUpon>AdventureWorksDb.tt</DependentUpon>
     </Compile>
@@ -125,6 +130,7 @@
     <Compile Include="Entities\EmployeePayHistory.cs">
       <DependentUpon>AdventureWorksDb.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\EntityMetadata.cs" />
     <Compile Include="Entities\ErrorLog.cs">
       <DependentUpon>AdventureWorksDb.tt</DependentUpon>
     </Compile>
