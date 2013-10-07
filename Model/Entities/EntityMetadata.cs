@@ -264,7 +264,7 @@ namespace AdventureWorks.Domain.ModelObjects.Entities
     }
 
     [MetadataType(typeof(SalesOrderDetailMetadata))]
-    public partial class SalesOrderDetai
+    public partial class SalesOrderDetail
     {
     }
 
