@@ -37,7 +37,7 @@ Projects added:
 
 -	AdventureWorkSL
 
-	A simple Silverlight control that uses the Product Detail service from AdventureWorksServices
+	A simple Silverlight control that uses the Product Catalog service from AdventureWorksServices
 	to access product data.
 
 -	AdventureWorksSL.Web
