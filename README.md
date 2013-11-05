@@ -27,3 +27,20 @@ Projects in solution:
 
 	Service layer. Encapsulates access to DAO's.
 
+Projects added:
+
+-	AdventureWorksServices
+	
+	A WCF project that shows how to expose Service layer (ServiceObjects) functions
+	as SOAP services. Implements the service contracts. The data contracts are defined
+	in DTO's (data transfer objects) in the entity layer (ModelObjects).
+
+-	AdventureWorkSL
+
+	A simple Silverlight control that uses the Product Detail service from AdventureWorksServices
+	to access product data.
+
+-	AdventureWorksSL.Web
+
+	Web site to test/show AdventureWorksSL controls.	
+
