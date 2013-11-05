@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <system.serviceModel>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="BasicHttpBinding_IProductCatalogService" maxBufferSize="2147483647"
+          maxReceivedMessageSize="2147483647" 
+          receiveTimeout="00:10:00" sendTimeout="00:10:00" openTimeout="00:10:00">
+          <security mode="None" />
+        </binding>
+      </basicHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://localhost:19148/AdventureWorksServices.Products.ProductCatalogService.svc"
+        binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IProductCatalogService"
+        contract="ProductCatalogServiceReference.IProductCatalogService"
+        name="BasicHttpBinding_IProductCatalogService" />
+    </client>
+  </system.serviceModel>
+</configuration>

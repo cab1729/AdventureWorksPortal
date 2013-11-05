@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="faca5191-70de-49b1-b347-9f40895cf06b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8732/Design_Time_Addresses/AdventureWorksServices.Products/ProductCatalogService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="da9cef2a-01bb-4fa7-b976-2bb374b4eba6" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/AdventureWorksServices.Products/ProductCatalogService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="b203d244-8ab5-4fc3-b2e2-a291b40d5916" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/AdventureWorksServices.Products/ProductCatalogService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="5a35ccbd-cba8-4ea6-863a-266191f8ec78" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/AdventureWorksServices.Products/ProductCatalogService/mex" />
+    <MetadataFile FileName="AdventureWorks.Domain.ModelObjects.DataTransfer.xsd" MetadataType="Schema" ID="1ec536c6-1152-4958-8e3e-fb068e160e92" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/AdventureWorksServices.Products/ProductCatalogService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

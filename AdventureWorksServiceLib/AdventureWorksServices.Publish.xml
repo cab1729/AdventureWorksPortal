@@ -1,0 +1,18 @@
+<publishData>
+  <publishTarget publishUrl="http://localhost:19148/">
+    <file relUrl="bin/DataAccessObjects.dll" publishTime="10/28/2013 16:56:49" />
+    <file relUrl="Web.config" publishTime="10/25/2013 16:49:04" />
+    <file relUrl="bin/EntityFramework.dll" publishTime="08/28/2013 14:36:56" />
+    <file relUrl="bin/AdventureWorksServices.pdb" publishTime="10/28/2013 16:56:50" />
+    <file relUrl="bin/ServiceObjects.dll" publishTime="10/28/2013 16:56:49" />
+    <file relUrl="bin/Model.dll" publishTime="10/28/2013 16:56:47" />
+    <file relUrl="bin/EntityFramework.xml" publishTime="08/28/2013 14:36:57" />
+    <file relUrl="bin/AdventureWorksServices.dll.config" publishTime="10/25/2013 16:49:04" />
+    <file relUrl="bin/AdventureWorksServices.dll" publishTime="10/28/2013 16:56:50" />
+    <file relUrl="bin/DataAccessObjects.pdb" publishTime="10/28/2013 16:56:49" />
+    <file relUrl="bin/AutoMapper.dll" publishTime="10/03/2013 11:47:19" />
+    <file relUrl="AdventureWorksServices.Products.ProductCatalogService.svc" publishTime="10/29/2013 14:31:56" />
+    <file relUrl="bin/Model.pdb" publishTime="10/28/2013 16:56:47" />
+    <file relUrl="bin/ServiceObjects.pdb" publishTime="10/28/2013 16:56:49" />
+  </publishTarget>
+</publishData>
