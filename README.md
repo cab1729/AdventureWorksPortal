@@ -6,6 +6,12 @@ ASP.NET MVC 4 reference application built around the AdventureWorks sample datab
 Projects in solution:
 
 -	AdventureWorksPortal (MVC 4 Web application)
+	
+	Generated UI modified/enhanced:
+	- Bootstrap (CSS)
+	- Knockout (table paging)
+	- JQuery (validations, date select, etc.)
+	- MVC sitemap
 
 -	ModelObjects (class library)
 	
