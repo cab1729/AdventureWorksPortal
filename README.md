@@ -9,7 +9,7 @@ Projects in solution:
 	
 	Generated UI modified/enhanced:
 	- Bootstrap (CSS)
-	- Knockout (table paging)
+	- DataTable (table navigation)
 	- JQuery (validations, date select, etc.)
 	- MVC sitemap
 
